@@ -1,30 +1,31 @@
 package com.digitalbricklayer;
 
-import java.util.Collection;
-import java.util.Collections;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        Artigo artigo = new Artigo(
-                "Poo com o pedreiro",
-                "TheDigitalBricklayer",
-                1,
-                false
-        );
+        Gato gato = new Gato();
+        Cachorro cachorro = new Cachorro();
 
-        artigo.mostra();
+        List<Animal> animais = new ArrayList<>();
+        animais.add(gato);
+        animais.add(cachorro);
 
-        ArtigoCientifico artigoCientifico = new ArtigoCientifico(
-                "Poo com o pedreiro science",
-                "TheDigitalBricklayer",
-                1,
-                true,
-                Collections.singletonList("ORI"),
-                true
-        );
-        artigoCientifico.mostra();
-        artigoCientifico.publicar();
+        for (Animal animal : animais){
+            animal.anda();
+            if (animal instanceof  Cachorro){
+                 cachorro.corre();
+                 cachorro.corre(false);
+                 cachorro.corre("DBL");
+            }
+        }
+
+        for (Animalia animalia : animais){
+            System.out.println(animalia.extinto());
+        }
+
 
     }
 }
