@@ -1,4 +1,4 @@
-package com.digitalbricklayer;
+package com.digitalbricklayer.abstracaoheranca;
 
 import java.util.List;
 
@@ -14,6 +14,7 @@ public class ArtigoCientifico extends Artigo {
         this.referenciasBibliograficas = referenciasBibliograficas;
         this.abnt = abnt;
     }
+
 
     public void publicar() {
         System.out.println("Publicando");

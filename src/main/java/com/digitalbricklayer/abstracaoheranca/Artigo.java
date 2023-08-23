@@ -1,8 +1,8 @@
-package com.digitalbricklayer;
+package com.digitalbricklayer.abstracaoheranca;
 
 public class Artigo {
 
-    public String nome;
+    protected String nome;
 
     public String nomeAutor;
 

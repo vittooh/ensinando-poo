@@ -1,30 +1,18 @@
 package com.digitalbricklayer;
 
-import java.util.Collection;
-import java.util.Collections;
+import com.digitalbricklayer.abstracaoheranca.Artigo;
+import com.digitalbricklayer.abstracaoheranca.ArtigoCientifico;
+import com.digitalbricklayer.encaspulamento.Gerente;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
-        Artigo artigo = new Artigo(
-                "Poo com o pedreiro",
-                "TheDigitalBricklayer",
-                1,
-                false
-        );
+    public static void main(String[] args) throws Exception {
+        Gerente gerente = new Gerente();
+        gerente.setMultiplicadorCargo(- 10.0);
+        gerente.setSalarioBase( 5000.0);
+        System.out.println(gerente.calculaSalario());
 
-        artigo.mostra();
+        ArtigoCientifico artigoCientifico  = new ArtigoCientifico();
 
-        ArtigoCientifico artigoCientifico = new ArtigoCientifico(
-                "Poo com o pedreiro science",
-                "TheDigitalBricklayer",
-                1,
-                true,
-                Collections.singletonList("ORI"),
-                true
-        );
-        artigoCientifico.mostra();
-        artigoCientifico.publicar();
-
+        artigoCientifico.nome
     }
 }
